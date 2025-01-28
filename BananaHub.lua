@@ -100,12 +100,12 @@ local farmEnabled = false
 
 local function startAutoFarm()
     while farmEnabled do
-        local rod = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flimsy Rod")
+        local rod = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kings Rod")
         if rod then
             local castArgs = { [1] = 100, [2] = 2 }
             rod.events.cast:FireServer(unpack(castArgs))
         else
-            warn("Flimsy Rod not equipped.")
+            warn("Kings Rod not equipped.")
             break
         end
 
